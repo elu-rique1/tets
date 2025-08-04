@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <title>Formulario de Inmobiliaria</title>
+        <style>
+            #textarea {
+                border: 1px solid #c5c5c5;
+                font-family: arial;
+                font-size: 12px;
+                color: #666666;
+                padding: 5px;
+            }
+            #boton {
+                border: 1px solid #456;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                color: #456;
+            }
+
+        </style>
+    
+    </head>
+
+    <body bgcolor="#456" text="#c5c5c5">
+
+        <form action="#">
+
+            <label for="text">Nombre:</label>
+            <div><input type="text" name="nom" placeholder="Ingrese Nombre" maxlength="25"></div>
+
+            <label for="text">Apellido:</label>
+            <div><input type="text" name="ape" placeholder="Ingrese Apellido" maxlength="25"></div>
+
+            <label for="text">Dirección:</label>
+            <div><textarea name="dire" maxlength="30" rows="2" cols="30"></textarea></div>
+
+            <label for="text">Teléfono:</label>
+            <div><input type="tel" name="telef" value="0299-" maxlength="15"></div>
+
+            <label for="text">Seleccione una Opción:</label>
+            <div><select name="elec">
+                <option>Compra</option>
+                <option>Alquiler</option>
+            </select></div>
+            
+
+            <label for="text">Zonas de Interés:</label>
+            <div><input type="checkbox" name="z" checked>Zona Centro</div>
+            <div><input type="checkbox" name="z">Zona Norte</div>
+            <div><input type="checkbox" name="z" checked>Zona Sur</div>
+
+            <label for="text">Comente su vivienda ideal:</label>
+            <div><textarea name="coment" cols="20" rows="2"></textarea></div>
+
+            <div><input type="submit" name="envio" value="eviar Formulario"></div>
+            <div><input type="reset" name="res" value="rehacer"></div>
+
+             Especificaciones sobre el mueble:
+             <div>
+                <input type="textarea" placeholder="Especificaciones sobre el mueble"/>
+             </div>
+
+             <input type="submit" id="boton"/>
+             <input type="reset" id="boton"/>
+             
+        </form>
+
+
+
+
+
+    </body>
+</html>
