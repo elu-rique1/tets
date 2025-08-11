@@ -1,0 +1,36 @@
+#cx{
+    border: 7px solid rgb(184,184,184);
+    background-color: #555555;
+    display: flex;
+    width: 62%;
+    padding-bottom: 2%;
+    margin-bottom: 0%;
+}
+
+#c2{
+    display: flex;
+}
+
+#c3{
+    border: 7px solid rgb(184,184,184);
+    background-color: #555555;
+    display: flex;
+    width: 10%;
+    padding-bottom: 25%;
+    margin-right: 1%;
+}
+
+#c4{
+    border: 7px solid rgb(184,184,184);
+    background-color: #555555;
+    display: flex;
+    width: 40%;
+    padding-bottom: 25%;
+    margin-right: 1%;
+    justify-content: center;
+}
+
+p{
+    padding-top: 1%;
+    padding-left: 0.5%;
+}
