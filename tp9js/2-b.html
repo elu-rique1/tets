@@ -1,0 +1,29 @@
+<html>
+<body> 
+    <p id="resultado"></p>
+
+    <script>
+        function valores(Valor) {
+            if (Valor < 0) {
+                return -1;
+            } else if (Valor >= 0 && Valor < 10) {
+                return 0;
+            } else if (Valor >= 10 && Valor < 50) {
+                return 1;
+            } else if (Valor >= 50 && Valor < 100) {
+                return 2;
+            } else if (Valor >= 100) {
+                return 3;
+            }
+        }
+        
+        var valor = prompt("ingresa un número");
+        var valor = parseInt(valor);
+        var res = document.getElementById("resultado");
+
+        var resultado = valores(valor);
+        res.textContent = `${resultado}`;
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<html>
+<body>
+
+    <script>
+        onload=function detectar() {
+            var $resultado;
+            $resultado = navigator.appName;
+            switch ($resultado) {
+                case 'Microsoft Internet Explorer':
+                    window.open('http://www.microsoft.com/ie');
+                    break;
+                case 'Firefox':
+                    window.open('http://www.mozilla.com/firefox/');
+                    break;
+                case 'Konkeror':
+                    window.open('http://konqueror.org');
+                    break;
+                default:
+                    document.write('Browser Desconocido');
+                    break;
+            }
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<html>
+<body>
+
+        <div>
+            <button id="sumar" onclick="operar('suma')">Sumar</button>
+            <button id="restar" onclick="operar('resta')">Restar</button>
+            <button id="multiplicar" onclick="operar('multiplicacion')">Multiplicar</button>
+            <button id="dividir" onclick="operar('division')">Dividir</button>
+        </div>
+        <textarea id="resultado"></textarea>
+
+    <script>
+        function operar(operacion) {
+            var num1 = parseInt(prompt('Ingresa el primer número:'));
+            var num2 = parseInt(prompt('Ingresa el segundo número:'));
+            var texto = document.getElementById('resultado');
+
+
+            switch (operacion) {
+                case 'suma':
+                    resultado = num1 + num2;
+                break;
+                case 'resta':
+                    resultado = num1 - num2;
+                break;
+                case 'multiplicacion':
+                    resultado = num1 * num2;
+                break;
+                case 'division':
+                    resultado = num1 / num2;
+                break;
+                case 'potencia':
+                    resultado = num1 ^ num2;
+                break;
+                return;
+                case 'cuadrado':
+                    resultado = num1 ^ num1;
+                break;
+                return;
+            }
+            texto.value = resultado;
+        }
+    </script>
+
+</body>
+
+</html>

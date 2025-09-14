@@ -1,0 +1,37 @@
+<html>
+    <body>
+
+
+        <script>
+
+            var n=1;
+            var es=0;
+            var cont=1;
+            onload=function primos(){
+                
+                while (n<=100){
+
+                    while (cont<=n){
+
+                        r=n%cont;
+
+                        if (r == 0){
+                            es++;
+                        }
+                        cont++;
+                    }
+                    if (es==2){
+                        document.write(n+'  ');
+                    }
+                    
+                    n++;
+                    es=0;
+                    cont=0;
+
+                }
+
+            }
+        </script>
+
+    </body>
+</html>

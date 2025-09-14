@@ -1,0 +1,57 @@
+<html>
+<body>
+
+    <ul>
+        <li>
+            <span onclick="listitauwu()" style="text-decoration: underline;">-</span> 
+            <span onclick="listitauwu(previousElementSibling)">Neuquén</span>
+            <ul>
+                <li>Neuquén</li>
+                <li>Zapala</li>
+                <li>San Martín</li>
+                <li>Junín</li>
+            </ul>
+        </li>
+        <li>
+            <span onclick="listitauwu()" style="text-decoration: underline;">-</span> 
+            <span onclick="listitauwu(previousElementSibling)">Río Negro</span>
+            <ul>
+                <li>Cipolletti</li>
+                <li>Fernández Oro</li>
+                <li>Roca</li>
+                <li>Cinco Saltos</li>
+                <li>Allen</li>
+            </ul>
+        </li>
+        <li>
+            <span onclick="listitauwu()" style="text-decoration: underline;">-</span> 
+            <span onclick="listitauwu(previousElementSibling)">Buenos Aires</span>
+            <ul>
+                <li>La Plata</li>
+                <li>Mar del Plata</li>
+                <li>Necochea</li>
+            </ul>
+        </li>
+    </ul>
+
+    <script>
+
+        function listitauwu(botoncito) {
+
+            var metrocidad = botoncito.parentElement.querySelector('ul');
+
+         
+            if (metrocidad.style.display === 'none') {
+
+                metrocidad.style.display = 'block';
+                botoncito.nextElementSibling.style.textDecoration = 'none';
+
+            } else {
+                metrocidad.style.display = 'none';
+                botoncito.nextElementSibling.style.textDecoration = 'underline';
+            }
+        }
+    </script>
+
+</body>
+</html>

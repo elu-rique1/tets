@@ -1,0 +1,48 @@
+<html>
+<body>
+
+        <div>
+            <button id="pad" onclick="operar('pad')">pesos a dólares</button>
+            <button id="dap" onclick="operar('dap')">dólares a pesos</button>
+            <button id="par" onclick="operar('par')">pesos a reales</button>
+            <button id="rap" onclick="operar('rap')">reales a pesos</button>
+            <button id="pae" onclick="operar('pae')">pesos a euros</button>
+            <button id="eap" onclick="operar('eap')">euros a pesos</button>
+        </div>
+        <textarea id="resultado"></textarea>
+
+    <script>
+        function operar(operacion) {
+            var num1 = parseInt(prompt('Ingresa el número:'));
+            var texto = document.getElementById('resultado');
+
+
+            switch (operacion) {
+                case 'pad':
+                    resultado = num1 / 1300;
+                break;
+                case 'dap':
+                    resultado = num1 * 1300;
+                break;
+                case 'par':
+                    resultado = num1 / 250;
+                break;
+                case 'rap':
+                    resultado = num1 * 250;
+                break;
+                case 'pae':
+                    resultado = num1 / 1600;
+                break;
+                return;
+                case 'eap':
+                    resultado = num1 * 1600;
+                break;
+                return;
+            }
+            texto.value = resultado;
+        }
+    </script>
+
+</body>
+
+</html>

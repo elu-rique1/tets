@@ -1,0 +1,22 @@
+<html>
+<body>
+
+    <script onload>
+        function factorial(n) {
+            if (n === 0) {
+                return 1;
+            }
+            var resultado = 1;
+            for (i = 2; i <= n; i++) {
+                resultado *= i;
+            }
+            return resultado;
+        }
+
+        var n = parseInt(prompt("Ingresa un número"));
+        var resultadof = factorial(n);
+        document.write(`El factorial de ${n} es ${resultadof}.`);
+    </script>
+
+</body>
+</html>
