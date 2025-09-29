@@ -1,0 +1,65 @@
+<html>
+    <body>
+
+    <p id="sigma"></p>
+    <p id="mayusculas"></p>
+    <p id="mini"></p>
+    <p id="posicion5"></p>
+    <p id="hola"></p>
+    <p id="ezpazioz"></p>
+    <p id="traductorXD"></p>
+
+    <script>
+        function uwu() {
+
+            var mensajito = prompt("Ingrese el mensaje Papu :v");
+
+            document.getElementById('sigma').textContent = "Tu Papu Mensaje: " + mensajito;
+
+            var tupper = mensajito.toUpperCase();
+            document.getElementById('mayusculas').textContent = tupper;
+
+            var nimi = mensajito.toLowerCase();
+            document.getElementById('mini').textContent = nimi;
+            
+            var mayorista = mensajito.substr(5,100);
+            document.getElementById('posicion5').textContent = mayorista;
+
+
+            if (mensajito.toLowerCase().includes('hola')) {
+                document.getElementById('hola').textContent = "hola que tal";
+            } else {
+                document.getElementById('hola').textContent = "hola'nt :v";
+            }
+
+            var nose = mensajito.replace(/\s/g, '');
+
+            var olanot = nose.replace(/hola/gi, '');
+            document.getElementById('ezpazioz').textContent = olanot;
+
+            var transito = mensajito;
+
+            var dictadura = {
+                'mi': 'my',
+                'hola': 'hello',
+                'nombre': 'name',
+                'es': 'is',
+                'yo': 'i',
+                'el': 'the'
+            };
+
+            for (var espaniol in dictadura) {
+                var inglez = dictadura[espaniol];
+
+                var regex = new RegExp('\\b' + espaniol + '\\b', 'gi'); 
+                transito = transito.replace(regex, inglez);
+            }
+            document.getElementById('traductorXD').textContent = transito;
+        }
+
+        window.onload = uwu;
+
+    </script>
+
+    </body>
+</html>

@@ -1,0 +1,44 @@
+<html>
+
+    <h1>CHAT</h1>
+    <hr>
+    
+    <form>
+        <label for="nom">Nombre</label>
+        <input type="text" id="nom" name="nom" value="NNNNN">
+        
+        <br>
+        
+        <textarea id="text" name="text" rows="4" cols="50">Este es mi segundo post</textarea>
+        
+        <button type="button" onclick="enviar()">Enviar Mensaje</button>
+    </form>
+
+    <div id="listita"></div>
+
+    <script>
+        
+        function enviar() {
+
+            var userNameInput = document.getElementById('nom');
+            var textInput = document.getElementById('text');
+            var listitaContainer = document.getElementById('listita');
+
+            var nom = userNameInput.value.trim();
+            var text = textInput.value.trim();
+
+            var aora = new Date();
+            var uwu = `${aora.getMonth() + 1}/${aora.getDate()}/${aora.getFullYear()}`;
+            var time = `${aora.getHours()}:${aora.getMinutes()}:${aora.getSeconds()}`;
+            var shaw = `${uwu} ${time}`;
+            var nuebezim = document.createElement('p');
+
+            nuebezim.innerHTML = `${shaw} por ${nom}<br>${text}`;
+            listitaContainer.insertBefore(nuebezim, listitaContainer.firstChild);
+            textInput.value = "";
+            textInput.focus();
+        }
+    </script>
+
+</body>
+</html>

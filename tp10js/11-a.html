@@ -1,0 +1,48 @@
+<html>
+<body>
+
+    <p id=":v"></p>
+
+    <h2>Tiempo reztante para navidat:</h2>
+    <p id="Bv"></p>
+
+    <script>
+        function tiempesin() {
+
+            var shaw = new Date();
+            var h = String(shaw.getHours()).padStart(2, '0');
+            var m = String(shaw.getMinutes()).padStart(2, '0');
+            var s = String(shaw.getSeconds()).padStart(2, '0');
+            var feshaTextito = shaw.toLocaleDateString('es-ES', { 
+                weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' 
+            });
+
+            document.getElementById(':v').innerHTML = 
+                `Fecha: ${feshaTextito}<br>` + `Hora: ${h}:${m}:${s}`;
+
+
+            var anioaora = shaw.getFullYear();
+            var navidat = new Date(anioaora, 11, 25); 
+            
+            if (shaw > navidat) {
+                navidat.setFullYear(anioaora + 1);
+            }
+
+            var diffMs = navidat - shaw;
+            var totalS = Math.floor(diffMs / 1000);
+            var diaz = Math.floor(totalS / (3600 * 24));
+            var hr = Math.floor((totalS % (3600 * 24)) / 3600);
+            var mr = Math.floor((totalS % 3600) / 60);
+            var sr = totalS % 60;
+
+            document.getElementById('Bv').innerHTML = 
+                `Faltan ${diaz} días, ${hr} horas, ${mr} minutos y ${sr} segundos.`;
+        }
+
+        tiempesin();
+        
+        
+    </script>
+
+</body>
+</html>

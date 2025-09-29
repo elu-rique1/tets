@@ -1,0 +1,21 @@
+<html>
+<body>
+    
+    <button onclick="jijija()">Calcular Edad</button>
+
+    <p id="edat"></p>
+
+    <script>
+        function jijija() {
+
+            var anio = prompt("ingresa tu año de nacimiento:");
+            var anial = parseInt(anio.trim());
+            var shear = new Date().getFullYear();
+
+            var edat = shear - anial;
+            document.getElementById('edat').textContent = `Su edad es ${edat}.`;
+        }
+    </script>
+
+</body>
+</html>
